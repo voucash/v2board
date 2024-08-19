@@ -4,7 +4,7 @@ V2Board VouCash支付插件 支持USDT，关于 VouCash
 ### 设置
 ```
 1. 下载 SDK
-下载app/Payments/voucash.php，并上传到面板app/Payments目录中
+    下载app/Payments/voucash.php，并上传到面板app/Payments目录中
 2. 面板管理后台 > 系统配置 > 站点 
     添加你的网站域名，不然在后面添加支付会提示失败
 3. 添加 VouCash 支付方式
