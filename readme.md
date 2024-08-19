@@ -1,24 +1,24 @@
-<img src="https://avatars.githubusercontent.com/u/56885001?s=200&v=4" alt="logo" width="130" height="130" align="right"/>
+# V2Board接入VouCash
+V2Board VouCash支付插件 支持USDT，关于 VouCash
 
-# **V2Board**
+### 设置
+```
+1. 下载 SDK
+下载app/Payments/voucash.php，并上传到面板app/Payments目录中
+2. 面板管理后台 > 系统配置 > 站点 
+    添加你的网站域名，不然在后面添加支付会提示失败
+3. 添加 VouCash 支付方式
+    面板管理后台 > 支付配置 > + 添加支付方式
+    显示名称	VouCash代金券
+    接口文件	VouCash
+3. 启用该支付方式
+```
 
-- PHP7.3+
-- Composer
-- MySQL5.5+
-- Redis
-- Laravel
 
-## Demo
-[Demo](https://demo.v2board.com)
+### 兑现
+1. 面板管理后台 > 订单管理 > 点击订单号 > 订单详情
+![v2board支付成功](https://raw.githubusercontent.com/voucash/learncoins/master/images/v2board.png)
+2. 复制回调单号到 [VouCash提现](https://voucash.com/reedem)
 
-## Document
-[Click](https://v2board.com)
-
-## Sponsors
-Thanks to the open source project license provided by [Jetbrains](https://www.jetbrains.com/)
-
-## Community
-🔔Telegram Channel: [@v2board](https://t.me/v2board)  
-
-## How to Feedback
-Follow the template in the issue to submit your question correctly, and we will have someone follow up with you.
+## 有问题和合作可以小飞机联系我们
+ - telegram：@voucash
