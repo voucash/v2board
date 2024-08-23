@@ -1,5 +1,5 @@
 # V2Board接入VouCash
-V2Board VouCash支付插件 支持USDT，关于 VouCash
+V2Board VouCash支付插件 支持USDT，关于 [VouCash](https://voucash.com/cn/about)
 
 ### 设置
 ```
@@ -16,9 +16,9 @@ V2Board VouCash支付插件 支持USDT，关于 VouCash
 
 
 ### 兑现
-1. 面板管理后台 > 订单管理 > 点击订单号 > 订单详情
+1. 用户支付后，面板管理后台 > 订单管理 > 点击订单号 > 订单详情
 ![v2board支付成功](https://raw.githubusercontent.com/voucash/learncoins/master/images/v2board.png)
-2. 复制回调单号到 [VouCash提现](https://voucash.com/redeem)
+2. 复制回调单号到 [VouCash提现](https://voucash.com/cn/redeem){:target="_blank"}
 
 ## 有问题和合作可以小飞机联系我们
  - telegram：@voucash
