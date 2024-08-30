@@ -1,5 +1,5 @@
 # V2Board接入VouCash
-V2Board VouCash支付插件 支持USDT，关于 [VouCash](https://voucash.com/cn/about)
+V2Board VouCash支付插件 支持USDT，关于 [VouCash](https://github.com/voucash/voucash)
 
 ### 设置
 ```
