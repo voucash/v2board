@@ -44,8 +44,7 @@ class VouCash {
             
             $raw_post_data = file_get_contents('php://input');
             file_put_contents('/tmp/ipn.log', $raw_post_data);
-            // $ch = curl_init("https://voucash.com/api/payment/verify");
-            $ch = curl_init("http://172.22.160.1:9876/api/payment/verify");
+            $ch = curl_init("https://voucash.com/api/payment/verify");
         
             curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
             curl_setopt($ch, CURLOPT_POST, 1);
