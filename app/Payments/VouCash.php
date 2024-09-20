@@ -32,7 +32,7 @@ class VouCash {
         $trade_no = $order['trade_no'];
         return [
             'type' => 1, // 0:qrcode 1:url
-            'data' => "https://voucash.com/cn/payment/?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url']
+            'data' => "https://voucash.com/api/payment?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url']
         ];
     }
 
