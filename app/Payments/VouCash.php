@@ -47,8 +47,7 @@ class VouCash {
         $trade_no = $order['trade_no'];
         return [
             'type' => 1, // 0:qrcode 1:url
-            // 'data' => "https://voucash.com/cn/payment/?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url'],
-            'data' => "http://localhost:9876/api/payment/?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url']
+            'data' => "https://voucash.com/api/payment?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url']
         ];
     }
 
@@ -60,8 +59,7 @@ class VouCash {
             
             $raw_post_data = file_get_contents('php://input');
             file_put_contents('/tmp/ipn.log', $raw_post_data);
-            // $ch = curl_init("https://voucash.com/api/payment/verify");
-            $ch = curl_init("http://172.22.160.1:9876/api/payment/verify");
+            $ch = curl_init("https://voucash.com/api/payment/verify");
         
             curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
             curl_setopt($ch, CURLOPT_POST, 1);
