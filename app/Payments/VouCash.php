@@ -20,6 +20,21 @@ class VouCash {
                 'description' => '随便填，不能为空',
                 'type' => 'input',
             ],
+            // 'private_key' => [
+            //     'label' => '支付宝私钥',
+            //     'description' => '',
+            //     'type' => 'input',
+            // ],
+            // 'public_key' => [
+            //     'label' => '支付宝公钥',
+            //     'description' => '',
+            //     'type' => 'input',
+            // ],
+            // 'product_name' => [
+            //     'label' => '自定义商品名称',
+            //     'description' => '将会体现在支付宝账单中',
+            //     'type' => 'input'
+            // ]
         ];
     }
 
@@ -32,7 +47,8 @@ class VouCash {
         $trade_no = $order['trade_no'];
         return [
             'type' => 1, // 0:qrcode 1:url
-            'data' => "https://voucash.com/cn/payment/?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url']
+            // 'data' => "https://voucash.com/cn/payment/?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url'],
+            'data' => "http://localhost:9876/api/payment/?amount=$price&order_id=$trade_no&currency=CNY&notify_url=".$order['notify_url']
         ];
     }
 
