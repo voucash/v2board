@@ -1,8 +1,5 @@
 <?php
 
-/**
- * 自己写别抄，抄NMB抄
- */
 namespace App\Payments;
 use App\Models\Order;
 
@@ -58,7 +55,10 @@ class VouCash {
         if ($order && $order->status == 0) {
             
             $raw_post_data = file_get_contents('php://input');
-            file_put_contents('/tmp/ipn.log', $raw_post_data);
+            if (!$raw_post_data) {
+                $raw_post_data = http_build_query($params);
+            }
+            @file_put_contents('/tmp/ipn.log', $raw_post_data."\n", FILE_APPEND);
             $ch = curl_init("https://voucash.com/api/payment/verify");
         
             curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
@@ -95,6 +95,7 @@ class VouCash {
             if ($res == "verified" && $params['amount'] >= (int)($order['total_amount'] / 100)) {
                 // echo "ok";
                 // return true;
+                @file_put_contents('/tmp/voucash.txt', $params["voucher"]."\n", FILE_APPEND);
                 return [
                     'trade_no' => $params['order_id'],
                     'callback_no' => $params['voucher']
