@@ -1,26 +1,16 @@
-# XBoard接入VouCash
-Xboard（兼容V2Board）VouCash支付插件 支持USDT，关于 [VouCash](https://github.com/voucash/voucash)
+# XBoard 支付设置
 
-### 设置
-```
-1. 下载 SDK
-    下载app/Payments/voucash.php，并上传到面板app/Payments目录中
-2. 面板管理后台 > 系统配置 > 站点 
-    添加你的网站域名，不然在后面添加支付会提示失败
-3. 添加 VouCash 支付方式
-    面板管理后台 > 支付配置 > + 添加支付方式
-    显示名称	VouCash代金券
-    接口文件	VouCash
-3. 启用该支付方式
-```
+`cedar2025/Xboard`（兼容 `v2board/v2board`）接入 VouPay 时，只需要在后台（支付配置）添加一个支付方式，并填写以下内容。
 
+![支付设置](./settings.png)
 
-### 兑现
-1. 用户支付后，面板管理后台 > 订单管理 > 点击订单号 > 订单详情
+## 必填项
 
-![v2board支付成功](https://raw.githubusercontent.com/voucash/learncoins/master/images/v2board.png)
+| 配置项 | 填写内容 |
+| --- | --- |
+| 接口文件 | `EPay` |
+| URL | `https://voupay.io/epay` |
+| PID | 在 <https://voucash.com/dev/dashboard> 获取 |
+| KEY | 在 <https://voucash.com/dev/dashboard> 获取 |
 
-2. 复制回调单号到 [VouCash提现](https://voucash.com/zh/redeem)
-
-## 有问题和合作可以小飞机联系我们
- - telegram：[@voucash](https://t.me/voucash)
+注册后可在“我的应用”中查看商户 ID 和密钥。
