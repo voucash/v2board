@@ -10,7 +10,7 @@
 | --- | --- |
 | 接口文件 | `EPay` |
 | URL | `https://voupay.io/epay` |
-| PID | 在 <https://voucash.com/dev/dashboard> 获取 |
-| KEY | 在 <https://voucash.com/dev/dashboard> 获取 |
+| PID | 在 <https://voucash.com/dev/apps> 获取 |
+| KEY | 在 <https://voucash.com/dev/apps> 获取 |
 
 注册后可在“我的应用”中查看商户 ID 和密钥。
